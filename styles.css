@@ -1,0 +1,374 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+:root {
+  --primary-color: #667eea;
+  --primary-background: #667eea;
+}
+
+/* Navbar */
+
+header {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid lightgray;
+  background: white;
+  z-index: 999;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 12px 9px;
+  justify-content: space-between;
+}
+
+.navbrand {
+  flex: 1;
+}
+.navbrand a {
+  color: black;
+  font-size: 32px;
+  font-weight: bolder;
+  font-family: "Viaoda Libre", sans-serif;
+}
+
+.nav-ul {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link--active {
+  color: var(--primary-color);
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu i {
+  font-size: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-ul {
+    flex-direction: column;
+    position: absolute;
+    top: -400px;
+    right: 0;
+    background: var(--primary-background);
+    z-index: 99;
+    max-width: 400px;
+    width: 100%;
+    height: 300px;
+    justify-content: space-around;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 0px 0 0 5px;
+  }
+  .nav-ul a {
+    color: white;
+  }
+  .menu {
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+}
+
+.menu--click {
+  transform: rotate(360deg);
+  color: white;
+}
+
+.nav-ul--active {
+  top: 0;
+}
+/* Navbar */
+
+/*Main Styles*/
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 9px;
+}
+
+.hero-section {
+  padding-top: 50px;
+  /* background: url("./images/cool-background.png"); */
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 50px;
+}
+
+.hero-section h1 {
+  font-size: clamp(42px, 5vw, 112px);
+  text-align: center;
+  color: transparent;
+  background: url("./images/stars.jpg");
+  background-clip: text;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-background-clip: text;
+}
+
+.hero-section .tagline {
+  text-align: center;
+  margin-top: 25px;
+  max-width: 800px;
+  margin: 20px auto 0;
+  color: var(--primary-color);
+  color: rgb(37, 37, 37);
+  font-size: 22px;
+}
+
+.cta-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.cta-button-group a {
+  display: block;
+  padding: 12px 18px;
+  border: 2px solid var(--primary-color);
+  margin: 0 18px;
+  border-radius: 5px;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 600;
+  max-width: 130px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 486px) {
+  .hero-section .tagline {
+    font-size: 16px;
+  }
+  .cta-button-group a {
+    padding: 8px 14px;
+    margin-top: 14px;
+    font-weight: normal;
+  }
+}
+
+.cta-main {
+  border: none !important;
+  background: var(--primary-background);
+  color: white !important;
+}
+
+.works-section {
+  margin-top: 50px;
+}
+
+.works-section h2 {
+  font-size: 32px;
+  font-size: bolder;
+  position: relative;
+  text-align: center;
+}
+
+.works-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1096px) {
+  .works-card-container {
+    justify-content: center;
+  }
+  .works-card {
+    margin: 0 20px;
+  }
+}
+@media screen and (max-width: 810px) {
+  .works-card {
+    margin: 0 0px;
+  }
+}
+
+.works-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  width: 100%;
+  padding: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 1px 12px 31px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 1px 12px 31px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 12px 31px rgba(0, 0, 0, 0.2); */
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.card-img {
+  min-height: 200px;
+  border-radius: 5px;
+}
+
+.card-one {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("./images/docdoc.PNG");
+  background-position: center;
+  background-size: cover;
+}
+
+.card-two {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("./images/gym.PNG");
+  background-position: center;
+  background-size: cover;
+}
+
+.card-three {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("./images/realestate.PNG");
+  background-position: left;
+  background-size: cover;
+}
+
+.card-title {
+  margin: 10px 0;
+}
+
+.card-title h3 {
+  font-family: "Open Sans", "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+.card-description {
+  font-size: 14px;
+}
+
+.card-link {
+  margin-top: 20px;
+  padding: 8px 18px;
+  background: var(--primary-color);
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.card-link a {
+  color: white;
+}
+
+.github-link {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("./images/stars.jpg");
+  background-attachment: fixed;
+  background-position: top;
+  background-size: cover;
+  color: white;
+  padding: 40px 0;
+}
+
+.github-link .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.github-link a {
+  padding: 12px 18px;
+  display: block;
+  margin-left: 20px;
+  border-radius: 5px;
+  background: white;
+  color: black;
+}
+
+@media screen and (max-width: 540px) {
+  .github-link .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .github-link a {
+    margin: 20px 0 0;
+  }
+}
+
+.about-section {
+  margin-top: 50px;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  font-size: bolder;
+  position: relative;
+  text-align: center;
+}
+
+.about-section p {
+  max-width: 890px;
+  margin: 20px auto;
+}
+
+.contact-section {
+  margin: 50px 0;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  font-size: bolder;
+  text-align: center;
+}
+
+.contact-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact-info p {
+  margin-top: 12px;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 130px;
+  margin: 20px auto 0;
+}
+
+.social-links a {
+  font-size: 22px;
+  color: black;
+}
+
+/*Main Styles*/
