@@ -133,12 +133,7 @@ nav {
 .hero-section h1 {
   font-size: clamp(42px, 5vw, 112px);
   text-align: center;
-  color: transparent;
-  background: url("./images/stars.jpg");
-  background-clip: text;
-  background-position: center;
-  background-attachment: fixed;
-  -webkit-background-clip: text;
+  color: black;
 }
 
 .hero-section .tagline {
