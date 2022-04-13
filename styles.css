@@ -298,6 +298,12 @@ nav {
   justify-content: center;
 }
 
+.github-link p {
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
 .github-link a {
   padding: 12px 18px;
   display: block;
