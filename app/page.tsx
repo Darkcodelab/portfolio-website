@@ -20,7 +20,7 @@ export default function Home() {
             href="mailto:contact@darkcodelab.in"
             className="inline-block bg-primaryfg text-primarybg py-3 rounded-full px-8 mt-8"
           >
-            Let's talk
+            Let&apos;s talk
           </a>
         </div>
         <div>
