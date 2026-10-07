@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { quicksandFont } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Deepan Chakravarthi — Software Engineer",
@@ -40,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${quicksandFont.className}`}>
       <body className="antialiased">{children}</body>
     </html>
   );

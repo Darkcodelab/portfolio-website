@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
-
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -53,7 +51,6 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "Quicksand", Arial, Helvetica, sans-serif;
   }
 }
 
