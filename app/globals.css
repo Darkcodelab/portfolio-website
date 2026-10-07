@@ -1,71 +1,70 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-border: var(--border);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-ring: var(--ring);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-border: var(--border);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-ring: var(--ring);
 }
 
 :root {
-  color-scheme: light;
-  --background: oklch(0.98 0.006 270);
-  --foreground: oklch(0.16 0.025 270);
-  --card: oklch(1 0 0 / 68%);
-  --card-foreground: oklch(0.16 0.025 270);
-  --muted-foreground: oklch(0.48 0.025 270);
-  --border: oklch(0.16 0.025 270 / 12%);
-  --primary: oklch(0.55 0.22 275);
-  --primary-foreground: oklch(0.98 0 0);
-  --ring: oklch(0.55 0.22 275);
+	color-scheme: light;
+	--background: oklch(0.98 0.006 270);
+	--foreground: oklch(0.16 0.025 270);
+	--card: oklch(1 0 0 / 68%);
+	--card-foreground: oklch(0.16 0.025 270);
+	--muted-foreground: oklch(0.48 0.025 270);
+	--border: oklch(0.16 0.025 270 / 12%);
+	--primary: oklch(0.55 0.22 275);
+	--primary-foreground: oklch(0.98 0 0);
+	--ring: oklch(0.55 0.22 275);
 }
 
 .dark {
-  color-scheme: dark;
-  --background: oklch(0.115 0.018 270);
-  --foreground: oklch(0.94 0.012 270);
-  --card: oklch(0.19 0.025 270 / 56%);
-  --card-foreground: oklch(0.94 0.012 270);
-  --muted-foreground: oklch(0.68 0.025 270);
-  --border: oklch(0.94 0.012 270 / 14%);
-  --primary: oklch(0.75 0.16 275);
-  --primary-foreground: oklch(0.12 0.02 270);
-  --ring: oklch(0.75 0.16 275);
+	color-scheme: dark;
+	--background: oklch(0.115 0.018 270);
+	--foreground: oklch(0.94 0.012 270);
+	--card: oklch(0.19 0.025 270 / 56%);
+	--card-foreground: oklch(0.94 0.012 270);
+	--muted-foreground: oklch(0.68 0.025 270);
+	--border: oklch(0.94 0.012 270 / 14%);
+	--primary: oklch(0.75 0.16 275);
+	--primary-foreground: oklch(0.12 0.02 270);
+	--ring: oklch(0.75 0.16 275);
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+	* {
+		@apply border-border outline-ring/50;
+	}
+	html {
+		scroll-behavior: smooth;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
 }
 
 @layer components {
-  .glass {
-    @apply border border-border/70 bg-card backdrop-blur-xl;
-    box-shadow:
-      0 18px 70px -32px oklch(0 0 0 / 40%),
-      inset 0 1px 0 oklch(1 0 0 / 8%);
-  }
-  .eyebrow {
-    @apply text-xs font-medium uppercase tracking-[.2em] text-primary;
-  }
+	.glass {
+		@apply border border-border/70 bg-card backdrop-blur-xl;
+		box-shadow:
+			0 18px 70px -32px oklch(0 0 0 / 40%),
+			inset 0 1px 0 oklch(1 0 0 / 8%);
+	}
+	.eyebrow {
+		@apply text-xs font-medium uppercase tracking-[.2em] text-primary;
+	}
 }
 
 ::selection {
-  background: color-mix(in oklab, var(--primary) 35%, transparent);
+	background: color-mix(in oklab, var(--primary) 35%, transparent);
 }
